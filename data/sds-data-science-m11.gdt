@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gretldata SYSTEM "gretldata.dtd">
+
+<gretldata version="1.4" name="sds-data-science-m11" frequency="1" startobs="1" endobs="100" type="cross-section">
+<description>Data imported from CSV file 'PART2-S4-Email-Offer.csv', 2019-11-08 12:05
+</description>
+<variables count="5">
+<variable name="Age"
+/>
+<variable name="Gender"
+ discrete="true"
+/>
+<variable name="TookAction"
+/>
+<variable name="Female"
+ label="dummy for Gender = 'Female'"
+ parent="Gender"
+ transform="dummify"
+ discrete="true"
+/>
+<variable name="Male"
+ label="dummy for Gender = 'Male'"
+ parent="Gender"
+ transform="dummify"
+ discrete="true"
+/>
+</variables>
+<observations count="100" labels="false">
+<obs>38 1 0 1 0 </obs>
+<obs>32 1 0 1 0 </obs>
+<obs>46 2 1 0 1 </obs>
+<obs>34 2 0 0 1 </obs>
+<obs>40 2 0 0 1 </obs>
+<obs>37 1 0 1 0 </obs>
+<obs>43 2 1 0 1 </obs>
+<obs>38 2 1 0 1 </obs>
+<obs>27 2 0 0 1 </obs>
+<obs>42 1 0 1 0 </obs>
+<obs>49 1 1 1 0 </obs>
+<obs>48 2 1 0 1 </obs>
+<obs>45 2 1 0 1 </obs>
+<obs>27 2 0 0 1 </obs>
+<obs>50 2 1 0 1 </obs>
+<obs>40 1 0 1 0 </obs>
+<obs>41 1 0 1 0 </obs>
+<obs>40 1 0 1 0 </obs>
+<obs>39 1 0 1 0 </obs>
+<obs>33 2 0 0 1 </obs>
+<obs>31 1 0 1 0 </obs>
+<obs>36 1 0 1 0 </obs>
+<obs>29 2 0 0 1 </obs>
+<obs>47 1 1 1 0 </obs>
+<obs>27 1 0 1 0 </obs>
+<obs>28 1 0 1 0 </obs>
+<obs>50 1 1 1 0 </obs>
+<obs>48 1 1 1 0 </obs>
+<obs>47 2 1 0 1 </obs>
+<obs>44 2 1 0 1 </obs>
+<obs>33 1 0 1 0 </obs>
+<obs>30 1 0 1 0 </obs>
+<obs>38 1 0 1 0 </obs>
+<obs>30 2 0 0 1 </obs>
+<obs>36 1 0 1 0 </obs>
+<obs>39 1 0 1 0 </obs>
+<obs>41 1 0 1 0 </obs>
+<obs>35 1 0 1 0 </obs>
+<obs>42 2 1 0 1 </obs>
+<obs>50 1 1 1 0 </obs>
+<obs>27 1 0 1 0 </obs>
+<obs>39 2 1 0 1 </obs>
+<obs>28 2 0 0 1 </obs>
+<obs>46 1 1 1 0 </obs>
+<obs>30 1 0 1 0 </obs>
+<obs>33 2 0 0 1 </obs>
+<obs>45 1 1 1 0 </obs>
+<obs>38 2 0 0 1 </obs>
+<obs>29 1 0 1 0 </obs>
+<obs>26 1 0 1 0 </obs>
+<obs>34 1 0 1 0 </obs>
+<obs>26 2 0 0 1 </obs>
+<obs>31 2 0 0 1 </obs>
+<obs>50 2 1 0 1 </obs>
+<obs>32 2 0 0 1 </obs>
+<obs>36 2 0 0 1 </obs>
+<obs>47 1 1 1 0 </obs>
+<obs>35 2 0 0 1 </obs>
+<obs>31 1 0 1 0 </obs>
+<obs>37 2 1 0 1 </obs>
+<obs>35 1 0 1 0 </obs>
+<obs>44 2 1 0 1 </obs>
+<obs>48 2 1 0 1 </obs>
+<obs>29 1 0 1 0 </obs>
+<obs>39 2 0 0 1 </obs>
+<obs>45 2 1 0 1 </obs>
+<obs>37 1 0 1 0 </obs>
+<obs>28 2 0 0 1 </obs>
+<obs>35 2 0 0 1 </obs>
+<obs>47 2 1 0 1 </obs>
+<obs>41 2 1 0 1 </obs>
+<obs>28 1 0 1 0 </obs>
+<obs>42 1 0 1 0 </obs>
+<obs>29 2 0 0 1 </obs>
+<obs>26 1 0 1 0 </obs>
+<obs>30 2 0 0 1 </obs>
+<obs>32 2 0 0 1 </obs>
+<obs>44 1 1 1 0 </obs>
+<obs>43 2 1 0 1 </obs>
+<obs>42 2 1 0 1 </obs>
+<obs>46 2 1 0 1 </obs>
+<obs>44 1 1 1 0 </obs>
+<obs>43 1 0 1 0 </obs>
+<obs>49 2 1 0 1 </obs>
+<obs>37 2 0 0 1 </obs>
+<obs>49 1 1 1 0 </obs>
+<obs>45 1 1 1 0 </obs>
+<obs>41 2 1 0 1 </obs>
+<obs>40 2 1 0 1 </obs>
+<obs>33 1 0 1 0 </obs>
+<obs>43 1 1 1 0 </obs>
+<obs>26 2 0 0 1 </obs>
+<obs>46 1 1 1 0 </obs>
+<obs>48 1 1 1 0 </obs>
+<obs>34 2 1 0 1 </obs>
+<obs>31 2 0 0 1 </obs>
+<obs>49 2 1 0 1 </obs>
+<obs>36 2 0 0 1 </obs>
+<obs>32 1 0 1 0 </obs>
+<obs>34 1 0 1 0 </obs>
+</observations>
+<string-tables count="1">
+<valstrings owner="Gender" count="2">"Female" "Male" </valstrings>
+</string-tables>
+</gretldata>
