@@ -1,0 +1,25 @@
+# Log started 2019-11-11 13:55
+# Record of session commands.  Please note that this will
+# likely require editing if it is to be run as a script.
+open \
+  /Users/jukkan01/dev/projects/SDSCourses/sds-data-science-a-z/data/sds-data-science-m12-2.gdt
+# model 1
+logit Exited 0 CreditScore Age Tenure NumOfProducts IsActiveMember \
+  Germany Female WealthAccumulation --p-values
+vif
+bkw
+# store "/Users/jukkan01/dev/projects/SDSCourses/sds-data-science-a-z/data/sds-data-science-m12-2.gdt" --gzipped
+Log_WA = log10(Balance/Age +1)
+# store "/Users/jukkan01/dev/projects/SDSCourses/sds-data-science-a-z/data/sds-data-science-m12-2.gdt" --gzipped
+# model 2
+logit Exited 0 CreditScore Age Tenure NumOfProducts IsActiveMember \
+  Germany Female Log_Balance Log_WA --p-values
+vif
+bkw
+# model 3
+logit Exited 0 CreditScore Age Tenure NumOfProducts IsActiveMember \
+  Germany Female Log_Balance --p-values
+vif
+bkw
+corr Age Log_Balance WealthAccumulation Log_WA
+corr Log_WA WealthAccumulation Log_Balance Age
