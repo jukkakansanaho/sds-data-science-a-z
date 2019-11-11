@@ -1,4 +1,10 @@
+# General
 .~*
 ~$*
+
+# Gretl temp files
+*.gdt~
+
+# MacOS
 .DS_Store
 examplecode.py

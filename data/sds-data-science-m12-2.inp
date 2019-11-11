@@ -1,0 +1,10 @@
+# Log started 2019-11-11 12:43
+# Record of session commands.  Please note that this will
+# likely require editing if it is to be run as a script.
+open \
+  /Users/jukkan01/dev/projects/SDSCourses/sds-data-science-a-z/data/sds-data-science-m12-2.gdt
+# model 1
+logit Exited 0 CreditScore Age Tenure Balance NumOfProducts \
+  IsActiveMember Germany Female --p-values
+# store "/Users/jukkan01/dev/projects/SDSCourses/sds-data-science-a-z/data/sds-data-science-m12-2.gdt" --gzipped
+# store "/Users/jukkan01/dev/projects/SDSCourses/sds-data-science-a-z/data/sds-data-science-m12-2.gdt" --gzipped
