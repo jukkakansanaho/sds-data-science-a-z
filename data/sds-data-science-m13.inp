@@ -1,0 +1,25 @@
+# Log started 2019-11-13 07:06
+# Record of session commands.  Please note that this will
+# likely require editing if it is to be run as a script.
+open \
+  /Users/jukkan01/dev/projects/SDSCourses/sds-data-science-a-z/source_data/PART2-S5-Churn-Modelling-With-Test-Data-Appended.csv
+# store "/Users/jukkan01/dev/projects/SDSCourses/sds-data-science-a-z/data/sds-data-science-m13-test.gdt" --gzipped=1
+dummify Gender
+dummify Geography
+rename 17 France
+rename 18 Spain
+rename 19 Germany
+rename 15 Female
+rename 16 Male
+# store "/Users/jukkan01/dev/projects/SDSCourses/sds-data-science-a-z/data/sds-data-science-m13-test.gdt" --gzipped=1
+LogBalance = log10(Balance +1)
+# store "/Users/jukkan01/dev/projects/SDSCourses/sds-data-science-a-z/data/sds-data-science-m13-test.gdt" --gzipped=1
+# model 1
+logit Exited 0 CreditScore Age Tenure NumOfProducts IsActiveMember \
+  Germany Female LogBalance --p-values
+fcast 10001 11000 --static
+# model 1
+fcast 10001 11000 P_Hat_TestData
+# store "/Users/jukkan01/dev/projects/SDSCourses/sds-data-science-a-z/data/sds-data-science-m13-test.gdt" --gzipped
+# store "/Users/jukkan01/dev/projects/SDSCourses/sds-data-science-a-z/source_data/sds-data-science-m13-test-forecast.csv"  RowNumber P_Hat_TestData --csv
+# store "/Users/jukkan01/dev/projects/SDSCourses/sds-data-science-a-z/data/sds-data-science-m13-test.gdt" --gzipped
