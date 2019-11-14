@@ -1,0 +1,28 @@
+# Log started 2019-11-13 14:50
+# Record of session commands.  Please note that this will
+# likely require editing if it is to be run as a script.
+open \
+  /Users/jukkan01/dev/projects/SDSCourses/sds-data-science-a-z/source_data/PART2-S5-Churn-Modelling.csv
+# store "/Users/jukkan01/dev/projects/SDSCourses/sds-data-science-a-z/data/sds-data-science-m14.gdt" --gzipped=1
+dummify Gender
+rename 15 Female
+rename 16 Male
+dummify Geography
+rename 17 France
+rename 18 Spain
+rename 19 Germany
+Log_Balance = log10(Balance +1)
+# store "/Users/jukkan01/dev/projects/SDSCourses/sds-data-science-a-z/data/sds-data-science-m14.gdt" --gzipped=1
+# model 1
+logit Exited 0 CreditScore Age Tenure NumOfProducts IsActiveMember \
+  Germany Female Log_Balance --p-values
+vif
+bkw
+# store "/Users/jukkan01/dev/projects/SDSCourses/sds-data-science-a-z/data/sds-data-science-m14.gdt" --gzipped
+# model 2
+logit Exited 0 CreditScore Age Tenure NumOfProducts IsActiveMember \
+  Germany Female Log_Balance --p-values
+include oddsratios.gfn
+# btmp___0 = GUI_oddsratios()
+# btmp___0 = GUI_oddsratios()
+# store "/Users/jukkan01/dev/projects/SDSCourses/sds-data-science-a-z/data/sds-data-science-m14.gdt" --gzipped
