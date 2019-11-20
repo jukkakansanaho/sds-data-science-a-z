@@ -26,6 +26,9 @@ _SuperDataScience: Data Science A-Z course | jukka.kansanaho@gmail.com | 2019-11
   `docker ps -a` \
   => You should see MS SQL container (with the name you gave with --name parameter) running
 
+- To map local directory to MSSS container, modify and run this: `docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" -p 1433:1433 --name sql1 -v <PATH-TO-YOUR-LOCAL-DIR>:/data -d mcr.microsoft.com/mssql/server:2017-latest` \
+  => Now you can access local files inside the container in /data dir
+
 ## Connect to MS SQL Server Express container
 
 - To connect to SQL Server container, run:\
@@ -74,9 +77,11 @@ _SuperDataScience: Data Science A-Z course | jukka.kansanaho@gmail.com | 2019-11
 
 - Download SSRS extension for MSVS: https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio
 
+- NOTE: MSVS for Mac doesn't support SSDT. Use Azure adata Studio instead.
+
 ## Stop and remove sql SQL Server Express container
 
-- To stop the cintainer, run: \
+- To stop the container, run: \
   `docker stop <container name or ID>`
 
 - Remove the container, run: \

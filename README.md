@@ -18,3 +18,8 @@ The courses on this path are:
 
 Data Science A-Z course page: https://www.superdatascience.com/courses/data-science-a-z
 Source data used in this course: https://www.superdatascience.com/pages/training
+
+# Course related NOTES
+
+- [MS SQL Server set-up instructions](./SDS-DataScienceAZ-P3-MSSQL-Express-setup.md)
+- [Notes for course's ETL sections](./SDS-DataScienceAZ-P3-MSSQL-Notes.md)
