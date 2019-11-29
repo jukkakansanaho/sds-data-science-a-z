@@ -1,0 +1,37 @@
+USE DSTRAINING
+GO
+
+SELECT COUNT(*) as 'RowCount'
+FROM RAW_FakeNames_20191126_Staging;
+GO
+
+SELECT *
+FROM dbo.RAW_FakeNames_20191126_Staging
+WHERE Number BETWEEN 1 AND 200;
+GO
+
+SELECT *
+FROM dbo.RAW_FakeNames_20191126_Staging
+WHERE Number BETWEEN 31351 AND 31353;
+GO
+--------
+SELECT COUNT(*) as 'RowCount'
+FROM RAW_FakeNames_20191126;
+GO
+
+SELECT *
+FROM dbo.RAW_FakeNames_20191126
+WHERE Number BETWEEN 1 AND 200;
+GO
+
+SELECT *
+FROM dbo.RAW_FakeNames_20191126
+WHERE Number BETWEEN 31351 AND 31353;
+GO
+
+---
+SELECT COUNT(*) AS InsufficientData
+FROM dbo.RAW_FakeNames_20191126
+--WHERE LEN(AmountPaid) = 0 OR LEN(ZipCode) = 0
+WHERE AmountPaid IS NULL OR ZipCode IS NULL
+GO
